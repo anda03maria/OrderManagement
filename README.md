@@ -5,7 +5,7 @@
 - Actualizare/Adaugare/Stergere agent
 
 ## Iteratia 2
-- Adaugare/Adaugare/Stergere produs
+- Adaugare/Actualizare/Stergere produs
 - Vizualizare produs
 
 ## Iteratia 3
