@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-image: url('welcome.jpeg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.order_management.ordermanagement.controller.AdminController">
+<tabs>
+    <Tab text="Manage Agents">
+        <content>
+            <Pane prefHeight="371.0" prefWidth="515.0">
+               <children>
+                   <TextField fx:id="nameTF" layoutX="38.0" layoutY="157.0" prefHeight="25.0" prefWidth="148.0" promptText="Name" />
+                   <TextField fx:id="emailTF" layoutX="38.0" layoutY="205.0" promptText="Email" />
+                   <TextField fx:id="passwordTF" layoutX="38.0" layoutY="253.0" promptText="Password" />
+                   <Button layoutX="216.0" layoutY="182.0" mnemonicParsing="false" onAction="#updateAgent" prefHeight="36.0" prefWidth="148.0" text="Modify">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font></Button>
+                   <Button layoutX="216.0" layoutY="247.0" mnemonicParsing="false" onAction="#deleteAgent" prefHeight="36.0" prefWidth="148.0" text="Delete">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font></Button>
+                  <Button layoutX="216.0" layoutY="113.0" mnemonicParsing="false" onAction="#addAgent" prefHeight="38.0" prefWidth="148.0" text="Add">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="41.0" prefWidth="256.0" text="Manage Agents" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="72.0" text="Credentials" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="216.0" layoutY="72.0" text="Actions" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="23.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idTF" layoutX="38.0" layoutY="113.0" prefHeight="25.0" prefWidth="148.0" promptText="Username (ID)" />
+               </children>
+            </Pane>
+        </content>
+    </Tab>
+
+    <Tab text="Manage Products">
+        <content>
+            <Pane>
+                <children>
+                    <TextField fx:id="nameProductTF" layoutX="38.0" layoutY="113.0" prefHeight="25.0" prefWidth="148.0" promptText="Name" />
+                    <TextField fx:id="descriptionTF" layoutX="38.0" layoutY="157.0" prefHeight="25.0" prefWidth="148.0" promptText="Description" />
+                    <TextField fx:id="priceTF" layoutX="38.0" layoutY="205.0" promptText="Price" />
+                    <Spinner fx:id="quantityS" layoutX="38.0" layoutY="253.0" max="100" min="0" promptText="Quantity" />
+                    <Button layoutX="216.0" layoutY="182.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="36.0" prefWidth="148.0" text="Modify">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font></Button>
+                    <Button layoutX="216.0" layoutY="248.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="36.0" prefWidth="148.0" text="Delete">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font></Button>
+                    <Button layoutX="216.0" layoutY="113.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="38.0" prefWidth="148.0" text="Add">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font></Button>
+                    <Label layoutX="14.0" layoutY="2.0" prefHeight="41.0" prefWidth="292.0" text="Manage Products" textFill="WHITE">
+                        <font>
+                            <Font name="Berlin Sans FB" size="36.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="38.0" layoutY="72.0" text="Details" textFill="WHITE">
+                        <font>
+                            <Font name="Berlin Sans FB" size="23.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="216.0" layoutY="72.0" text="Actions" textFill="WHITE">
+                        <font>
+                            <Font name="Berlin Sans FB" size="23.0" />
+                        </font>
+                    </Label>
+                </children></Pane>
+        </content>
+    </Tab>
+    <Tab text="View Products">
+        <Pane>
+            <TableView fx:id="productsTable" layoutX="9.0" layoutY="9.0" prefHeight="357.0" prefWidth="381.0">
+               <columns>
+                  <TableColumn fx:id="columnProductName" prefWidth="99.0" text="Name" />
+                  <TableColumn fx:id="columnProductDescription" minWidth="0.0" prefWidth="176.0" text="Description" />
+                  <TableColumn fx:id="columnProductPrice" prefWidth="66.0" text="Price" />
+                  <TableColumn fx:id="columnProductQuantity" prefWidth="39.0" text="Qty" />
+               </columns></TableView>
+        </Pane>
+    </Tab>
+    <Tab text="Settings">
+        <Pane>
+            <Button layoutX="14.0" layoutY="5.0" onAction="#logOut" prefHeight="50.0" prefWidth="102.0" text="Log Out" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label layoutX="14.0" layoutY="55.0" text="and register as an Agent" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+        </Pane>
+    </Tab>
+</tabs>
+</TabPane>

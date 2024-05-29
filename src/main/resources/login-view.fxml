@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="366.0" style="-fx-background-image: url('login.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.order_management.ordermanagement.controller.LoginController">
+<children>
+   <Label layoutX="142.0" layoutY="26.0" text="LogIn" textFill="WHITE">
+      <font>
+         <Font name="Berlin Sans FB" size="36.0" />
+      </font>
+   </Label>
+   <Button layoutX="130.0" layoutY="391.0" mnemonicParsing="false" onAction="#launchApp" prefHeight="41.0" prefWidth="107.0" text="LogIn" textFill="#191d30">
+      <font>
+         <Font name="Berlin Sans FB" size="22.0" />
+      </font>
+   </Button>
+   <Label layoutX="145.0" layoutY="105.0" prefHeight="26.0" prefWidth="75.0" text="Username" textFill="WHITE">
+      <font>
+         <Font name="Berlin Sans FB" size="17.0" />
+      </font>
+   </Label>
+   <Label layoutX="148.0" layoutY="202.0" prefHeight="26.0" prefWidth="68.0" text="Password" textFill="WHITE">
+      <font>
+         <Font name="Berlin Sans FB" size="17.0" />
+      </font>
+   </Label>
+   <TextField fx:id="idTF" layoutX="108.0" layoutY="141.0" promptText="username (id)" />
+   <PasswordField fx:id="passwordTF" layoutX="108.0" layoutY="234.0" promptText="password" />
+      <Button layoutX="130.0" layoutY="317.0" mnemonicParsing="false" onAction="#launchAdminApp" prefHeight="41.0" prefWidth="107.0" text="LogIn" textFill="#191d30">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="146.0" layoutY="358.0" prefHeight="26.0" prefWidth="75.0" text="*as Admin" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="432.0" prefHeight="26.0" prefWidth="75.0" text="*as Agent" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Label>
+</children>
+</Pane>
