@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlite:D:\\UBB\\Anul 2\\Semestrul2\\ISS\\Seminare\\gr222_CatineanuAndrei_AgentiVanzari\\OrderManagement\\OrderManagement.db</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+
+        <!--<mapping resource="entities/Admin.hbm.xml"/>-->
+        <mapping class="com.order_management.ordermanagement.model.Admin"/>
+        <mapping class="com.order_management.ordermanagement.model.Agent"/>
+        <mapping class="com.order_management.ordermanagement.model.Product"/>
+        <mapping class="com.order_management.ordermanagement.model.Order"/>
+
+    </session-factory>
+</hibernate-configuration>
